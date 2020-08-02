@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".model.MainActivity">
+
+    <TextView
+        android:id="@+id/tv_qlsv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quản Lí Sinh Viên !"
+        android:textColor="#FF5252"
+        android:textSize="30dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_masv"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="50dp"
+        android:text="Mã Sv"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_qlsv" />
+    <ImageButton
+        android:id="@+id/imgbtn_image"
+        android:layout_width="70dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/tra_xanh"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/edt_masv"
+        app:layout_constraintLeft_toRightOf="@id/edt_masv"
+        android:layout_height="70dp"/>
+
+    <EditText
+        android:id="@+id/edt_masv"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@id/tv_masv"
+        app:layout_constraintLeft_toRightOf="@id/tv_masv" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="25dp"
+        android:text="Name"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_masv" />
+
+    <EditText
+        android:id="@+id/edt_name"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@id/tv_name"
+        app:layout_constraintLeft_toRightOf="@id/tv_name" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="25dp"
+        android:text="Date"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+    <EditText
+        android:id="@+id/edt_date"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:onClick="onclickdate"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@id/tv_date"
+        app:layout_constraintLeft_toRightOf="@id/tv_name" />
+
+    <TextView
+        android:id="@+id/tv_gender"
+        android:layout_width="100dp"
+
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="25dp"
+        android:text="Gender"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_date" />
+
+    <RadioGroup
+        android:id="@+id/radio_gr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal"
+        android:textColor="#000000"
+        app:layout_constraintLeft_toRightOf="@id/tv_gender"
+        app:layout_constraintTop_toTopOf="@id/tv_gender">
+
+        <RadioButton
+            android:id="@+id/rdbtn_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:textColor="#000000" />
+
+        <RadioButton
+            android:id="@+id/rdbtn_male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Male"
+            android:textColor="#000000" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:layout_width="100dp"
+
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:text="Address"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radio_gr" />
+
+    <EditText
+        android:id="@+id/edt_address"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@id/tv_address"
+        app:layout_constraintLeft_toRightOf="@id/tv_address" />
+
+    <TextView
+        android:id="@+id/tv_majors"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:text="Majors"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_address" />
+
+    <EditText
+        android:id="@+id/edt_majors"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:onClick="onclickdate"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@id/tv_majors"
+        app:layout_constraintLeft_toRightOf="@id/tv_majors" />
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:text="Add"
+        android:textColor="#448AFF"
+        android:textStyle="bold|italic"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_majors" />
+
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Update"
+        android:textColor="#448AFF"
+        android:textStyle="bold|italic"
+        app:layout_constraintLeft_toRightOf="@id/btn_add"
+        app:layout_constraintTop_toBottomOf="@id/tv_majors" />
+
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="delete"
+        android:textColor="#448AFF"
+        android:textStyle="bold|italic"
+        app:layout_constraintLeft_toRightOf="@id/btn_update"
+        app:layout_constraintTop_toBottomOf="@id/tv_majors" />
+    <Button
+        android:id="@+id/btn_sapxep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Săp Xếp"
+        android:textColor="#448AFF"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/btn_update"
+        app:layout_constraintTop_toBottomOf="@id/btn_add" />
+
+    <Button
+        android:id="@+id/btn_timkiem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Search"
+        android:textColor="#448AFF"
+        android:textStyle="bold|italic"
+        app:layout_constraintLeft_toRightOf="@id/btn_delete"
+        app:layout_constraintTop_toBottomOf="@id/tv_majors" />
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Reset"
+
+        android:textColor="#448AFF"
+        android:textStyle="bold|italic"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_add" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcy_sinhvien"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/tra_xanh"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_back" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
